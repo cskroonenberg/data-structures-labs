@@ -50,7 +50,7 @@ class myQueue {
         std::swap(m_arr, newArr);
         m_front = 0;
         m_back = m_size - 1;
-        //delete[] newArr;
+        delete[] newArr;
     }
 
     public:
@@ -59,7 +59,7 @@ class myQueue {
     }
 
     myQueue(const myQueue<Object> & rhs) {
-        reserve(rhs.capacity());
+        m_capacity = rhs.capacity();
         m_size = rhs.size();
         m_front = rhs.m_front;
         m_back = rhs.m_back;
