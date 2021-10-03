@@ -1,21 +1,20 @@
+// Author: Caden Kroonenberg
+// Date: 10-01-21
 #ifndef MY_HASH_TABLE
 #define MY_HASH_TABLE
 
 #include <string>
 #include <vector>
 #include <list>
-#include <functional>
-#include <algorithm> // TODO remove
 #include <cmath>
 
 template <typename HashedObj>
 class myHashTable {
-    public: // TODO make private
+    private:
     int m_tableSize;
     std::vector<std::list<HashedObj>> m_lists;
 
     int smallestPrime(int min) {
-        //bool * arr[doubleSize] = {true};
         bool* arr = new bool[min*2];
         for(int i = 0; i < min*2; i++) {
             arr[i] = true;
@@ -210,10 +209,9 @@ class myHashTable {
         // remove item
 
         /*
-        The insertion method
-        should halve* the vector capacity when the load factor is smaller than 0.25. (The load factor is
-        defined as the number of elements in the hash table over the size of the vector.) After halving the
-        table, you should perform rehashing. The method should return TRUE if the element is successfully
+        The deletion method should halve* the vector capacity when the load factor is smaller than 0.25.
+        (The load factor is defined as the number of elements in the hash table over the size of the vector.)
+        After halving the table, you should perform rehashing. The method should return TRUE if the element is successfully
         deleted, and FALSE if not (e.g., the element does not exist). (*Make sure you choose the largest
         prime that is smaller than the halved size as the new table size.)
         */
