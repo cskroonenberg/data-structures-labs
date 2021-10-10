@@ -7,6 +7,7 @@
 #include <vector>
 #include <list>
 #include <cmath>
+#include <algorithm>
 
 template <typename HashedObj>
 class myHashTable {
