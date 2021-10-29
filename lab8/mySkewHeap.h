@@ -110,6 +110,7 @@ class mySkewHeap {
             h1->left = h2;
         } else {
             h1->right = merge(h1->right, h2);
+            swapChildren(h1);
         }
         return h1;
     }
